@@ -6,7 +6,9 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "sequelize": "^4.34.0",
+    "sqlite3": "^3.1.13"
   },
   "devDependencies": {
     "mocha": "^4.0.1",
@@ -14,8 +16,9 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha api/user/user.spec.js",
-    "start": "node index.js"
+    "test": "set NODE_ENV=test&&mocha api/user/user.spec.js",
+    "_commnet": "위의 test 설정 값은 윈도우 환경 셋팅. 그외 환경에서는 NODE_ENV=test mocha api/user/user.spec.js",
+    "start": "node bin/www.js"
   },
   "author": "Daesang cho",
   "license": "ISC"
